@@ -118,15 +118,15 @@ const replies = [[".ts", ".jsx", ".js", ".j"],
 const goodReplies = [".js", "alert('Hello World');", "if (a != 2) {}", "document.getElementByclassName","document.getElementsByAttribute", "nom", "continue", "0", "localeCompare()", "+", 'A', "switch()", "ch1.trim()","/* */", "ajoute l'élément 3"];
 //fonction de temps qui permet de repondre dans le 60secondes 
 function timerCount(duration, display) {
-    clearInterval(interval)
-    let timer = duration, seconds
+    clearInterval(interval);
+    let timer = duration, seconds;
     interval = setInterval(function () {
         seconds = parseInt(timer % 60, 10);
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = seconds;
         if (--timer < 0) {
             timer = duration;
-            clearInterval(interval)
+            clearInterval(interval);
             btnNext.disabled = false;
             btnNext.click();   
         }
