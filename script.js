@@ -35,10 +35,10 @@ function nameValidate() { //fonction de la validation du nom
             nameError.innerText = "Votre nom doit contenir au moins 2 caractères";
         }
         nameError.classList.add("redColor");
-        inputNom.classList.add("redBorder");
+        inputNom.style.borderColor="red";
     } else {
         nameError.innerText = "";
-        inputNom.classList.remove("redBorder");
+        inputNom.style.borderColor="";
     }
 }
 function emailValidate() {//fonction de la validation de l'email
@@ -49,10 +49,10 @@ function emailValidate() {//fonction de la validation de l'email
             emailError.innerText = "Ecrivez un Email valide";
         }
         emailError.classList.add("redColor");
-        inputEmail.classList.add("redBorder");
+        inputEmail.style.borderColor="red";
     } else {
         emailError.innerText = "";
-        inputEmail.classList.remove("redBorder");
+        inputEmail.style.borderColor="";
     }
 }
 //ma fonction qui appelle les deux validations

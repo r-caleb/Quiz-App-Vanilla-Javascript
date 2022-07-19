@@ -106,11 +106,6 @@ form>p {
     color: red;
     font-size: 12px;
 }
-
-.redBorder {
-    border: 1px solid red;
-}
-
 #questionsFrame {
     display: none;
 }
