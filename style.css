@@ -1,0 +1,498 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-display: swap;
+    src: url("Inter (web)/Inter-Regular.woff2?v=3.19") format("woff2"), url("Inter (web)/Inter-Regular.woff?v=3.19") format("woff");
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #555555;
+}
+#nameError, #emailError{
+    text-align: initial;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
+    background-blend-mode: darken;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid #fff;
+    width: 32%;
+    height: 90%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+form>h1 {
+    padding: 30px 0px 30px 0px;
+    font-style: medium;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 39px;
+    line-height: 100%;
+}
+
+form>p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 31.5px;
+    line-height: 130%;
+    vertical-align: top;
+    padding: 0px 10px 30px 10px;
+}
+
+.input-part {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.input-part label {
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: initial;
+}
+
+input {
+    padding: 15px;
+    height: 59px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    font-size: 15px;
+    text-align: initial;
+    outline: none;
+}
+
+#btnCommencer {
+    background-color: rgba(2, 138, 61, 1);
+    color: #fff;
+    width: 210px;
+    height: 50px;
+    margin: 30px 0px 50px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.redColor {
+    color: red;
+    font-size: 12px;
+}
+
+.redBorder {
+    border: 1px solid red;
+}
+
+#questionsFrame {
+    display: none;
+}
+
+.display-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.result-name {
+    padding: 70px 0px 30px 0px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 39px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.result-mail {
+    padding: 0px 0px 30px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.fa-circle-check {
+    color: rgba(2, 138, 61, 1);
+    font-size: 152px;
+    padding-bottom: 30px;
+}
+
+.fa-circle-xmark {
+    color: rgba(255, 56, 56, 1);
+    font-size: 152px;
+    padding-bottom: 30px;
+}
+
+.successOrFailed {
+    text-align: center;
+}
+
+.scores {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#btn-accueil {
+    background-color: rgba(8, 128, 214, 1);
+    color: #fff;
+    width: 210px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.title-question {
+    padding: 50px 0px 30px 0px;
+    font-style: medium;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 39px;
+    line-height: 100%;
+}
+
+.timer-count {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 20px;
+  font-size: 14px;
+}
+
+.progress-container {
+    width: 350px;
+    border: 1px solid #cecece;
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #cecece;
+}
+
+.radio-answers {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+}
+
+.radio-answers label {
+    height: 36px;
+    min-height: 100%;
+    border-radius: 0px;
+    box-sizing: content-box;
+    border: 1px solid #DDDDDD;
+    width: 100%;
+    padding-left: 70px;
+    padding-top: 10px;
+    margin-left: -75px;
+    margin-top: -9px;
+    color: #555555;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#quit {
+    background-color: rgba(236, 136, 12, 1);
+    color: #fff;
+    width: 190px;
+    height: 45px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#next {
+    background: rgba(2, 138, 61, 1);
+    color: #fff;
+    width: 190px;
+    height: 45px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    height: 39px;
+    width: 31px;
+    border-color: #cecece;
+    margin-top: -5px;
+    margin-left: 27px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"]:checked {
+    appearance: none;
+    margin-top: -2.5px;
+    margin-left: 27px;
+    width: 27px;
+    height: 26px;
+    border: 0px solid green;
+    border-radius: 20px;
+    background-color: green;
+}
+
+input[type="radio"]:checked~label {
+    border-color: green;
+    height: 36px;
+    min-height: 100%;
+    border-radius: 0px;
+    box-sizing: content-box;
+    width: 100%;
+    padding-left: 70px;
+    padding-top: 10px;
+    margin-left: -80px;
+    margin-top: -9px;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#radios {
+    display: flex;
+    flex-direction: column;
+}
+.progress-container{
+    width: 90%;
+}
+.progressBar {
+    animation-duration: 60s;
+    animation-name: glissement;
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 62px;
+    border: 1px solid #cecece;
+    animation-timing-function: linear;
+}
+
+@keyframes glissement {
+    from {
+        margin-left: 0%;
+        width: 100%;
+        background-color: green;
+        border: 1px solid green;
+    }
+    to {
+        margin-left: 0%;
+        width: 0%;
+        background-color: green;
+        border: 1px solid green;
+    }
+}
+@media screen and (max-width: 500px){
+
+    section {
+        background-color: #fff;
+        border: 1px solid #fff;
+        width: 94%;
+        height: 98%;
+    }
+    form>h1 {
+        padding: 5px 0px 30px 0px;
+        font-style: medium;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    .title-question {
+        padding: 25px 0px 30px 0px;
+        font-style: medium;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+    form>p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 31.5px;
+        line-height: 130%;
+        vertical-align: top;
+        padding: 0px 10px 0px 10px;
+    }
+    #btnCommencer {
+        background-color: rgba(2, 138, 61, 1);
+        color: #fff;
+        width: 210px;
+        height: 50px;
+        margin: 15px 0px 50px;
+        border: none;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+    } 
+    
+}
+
+@media screen and (min-width: 501px) and (max-width: 575px){
+
+    section {
+        background-color: #fff;
+        border: 1px solid #fff;
+        width: 87%;
+        height: 96%;
+    }
+    form>h1 {
+        padding: 5px 0px 15px 0px;
+        font-style: medium;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+    form>p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 31.5px;
+        line-height: 130%;
+        vertical-align: top;
+        padding: 0px 10px 10px 10px;
+    }
+    .title-question {
+        padding: 25px 0px 30px 0px;
+        font-style: medium;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+}
+@media screen and (min-width: 576px) and (max-width: 830px){
+
+    section {
+        background-color: #fff;
+        border: 1px solid #fff;
+        width: 65%;
+        height: 96%;
+    }
+    form>h1 {
+        padding: 5px 0px 15px 0px;
+        font-style: medium;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+    form>p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 31.5px;
+        line-height: 130%;
+        vertical-align: top;
+        padding: 0px 10px 10px 10px;
+    }
+    .title-question {
+        padding: 25px 0px 30px 0px;
+        font-style: medium;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+}
+@media screen and (min-width: 831px) and (max-width: 1135px){
+
+    section {
+        background-color: #fff;
+        border: 1px solid #fff;
+        width: 47%;
+        height: 96%;
+    }
+    form>h1 {
+        padding: 5px 0px 15px 0px;
+        font-style: medium;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+    form>p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 31.5px;
+        line-height: 130%;
+        vertical-align: top;
+        padding: 0px 10px 10px 10px;
+    }
+    .title-question {
+        padding: 25px 0px 30px 0px;
+        font-style: medium;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 39px;
+        line-height: 100%;
+    }
+    
+}
+@media screen and (max-height: 500px){
+
+    section {
+        background-color: #fff;
+        border: 1px solid #fff;
+        width: 94%;
+        height: 98%;
+        overflow-y: auto;
+}
+}

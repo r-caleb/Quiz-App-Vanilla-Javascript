@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css"
+        integrity="sha512-3kSeajrEqMrItwRkYz09bOsHsl4/wpoT6mgw5Aw+eSLweQtX7kZp2P/Dm7hnUg/TrbTGesAgCPwvZpllhuROTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <main>
+        <section>
+            <form action="" id="mainDisplay" novalidate>
+                <h1>JavaScript Quiz</h1>
+                <p>Évaluez vos connaissances en JavaScript en répondant aux questions que nous avons spécialement
+                    sélectionnées pour vous.
+                    <br> C'est fun et c'est gratuit.
+                </p>
+                <div class="input-part">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Joseph">
+                    <p id="nameError"></p>
+                </div>
+                <div class="input-part">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="joseph@kinshasadigital.com">
+                    <p id="emailError"></p>
+                </div>
+                <div>
+                    <input type="submit" value="Commencer" id="btnCommencer">
+                </div>
+            </form>
+            <form action="" id="questionsFrame">
+                <p class="title-question"></p>
+                <div class="timer-count">
+                    <p class="question-count"></p>
+                    <p class="timer"></p>
+                </div>
+                <div class="progress-container">
+                    <p class="progressBar"></p>
+                </div>
+                <div class="radio-container">
+                    <!-- <div class="radio-answers">
+                        <input type="radio" class="answer-choice" name="answer" value=".ts">
+                        <label for="answer-choice" id="answer-label">.ts</label>
+                    </div> -->
+                </div>
+                </div>
+                <div class="btnQuitNext">
+                    <button id="quit">Quitter</button>
+                    <button id="next">Suivant</button>
+                </div>
+            </form>
+            <div class="display-result">
+                <p class="result-name"></p>
+                <p class="result-mail"></p>
+                <p class="successOrFailed"></p>
+                <p class="scores"></p>
+                <button id="btn-accueil">Accueil</button>
+            </div>
+        </section>
+    </main>
+  <script src="script.js"></script>
+ <!--
+This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
+-->
+<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
